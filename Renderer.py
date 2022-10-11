@@ -11,6 +11,4 @@ def render(character: str) -> numpy.ndarray:
     canvas = PIL.ImageDraw.Draw(image)
     canvas.text((0, 0), character, Colors.black, font)
 
-    image.save(f'{character}.png')
-
     return numpy.array(image.getdata()).reshape(size[::-1])
